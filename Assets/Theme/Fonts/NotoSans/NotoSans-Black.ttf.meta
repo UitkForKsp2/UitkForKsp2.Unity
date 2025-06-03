@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d8a04ea58209fe4a9c401aea583f162
+guid: d32d59fe0935fbf478168949ece7d4d9
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,10 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SF Pixelate
+  - Noto Sans
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 90e0f585f1530a34abe87d920316a4a2, type: 3}
-  - {fileID: 12800000, guid: 9521a408a8367bc4d97f8da5c7efa0ba, type: 3}
+  - {fileID: 12800000, guid: 016a67c95c5ea1e408720ef0a217e130, type: 3}
+  - {fileID: 12800000, guid: 42808ec41ed1f614ea5f51314307775e, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

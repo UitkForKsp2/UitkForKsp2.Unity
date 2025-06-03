@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d8a04ea58209fe4a9c401aea583f162
+guid: f09cde8a25fe4544c920b56ea66bb148
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SF Pixelate
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 90e0f585f1530a34abe87d920316a4a2, type: 3}
-  - {fileID: 12800000, guid: 9521a408a8367bc4d97f8da5c7efa0ba, type: 3}
+  - SF Pixelate Shaded
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

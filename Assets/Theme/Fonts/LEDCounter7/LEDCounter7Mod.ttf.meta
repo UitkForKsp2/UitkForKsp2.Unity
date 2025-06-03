@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d8a04ea58209fe4a9c401aea583f162
+guid: 18bda48b594af194bb1956c3d7cd6aaa
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,10 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SF Pixelate
+  - LED Counter 7
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 90e0f585f1530a34abe87d920316a4a2, type: 3}
-  - {fileID: 12800000, guid: 9521a408a8367bc4d97f8da5c7efa0ba, type: 3}
+  - {fileID: 12800000, guid: 703d4ea1a8258f94eb1d8b5945e37500, type: 3}
+  - {fileID: 12800000, guid: 4ddf84d8113875c4483eb38e411d43aa, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
