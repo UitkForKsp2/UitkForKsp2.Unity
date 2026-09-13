@@ -1126,6 +1126,26 @@
     background-color: rgb(206, 190, 255);
 }
 
+/* A button that stays pressed, such as the chosen one of a set, is filled rather than outlined,
+   the way the stock Resource Manager's In and Out toggles are. An outline alone is too thin to
+   tell which of a row of buttons is the pressed one. */
+.oab-button.unity-text-element.selected {
+    border-color: rgb(185, 188, 245);
+}
+
+.oab-button.unity-text-element.selected > .oab-button__inner {
+    background-color: rgb(185, 188, 245);
+}
+
+/* Darker on hover, by the same step the stock toggles take from on to on-and-hovered. */
+.oab-button.unity-text-element.selected:hover {
+    border-color: rgb(156, 159, 207);
+}
+
+.oab-button.unity-text-element.selected:hover > .oab-button__inner {
+    background-color: rgb(156, 159, 207);
+}
+
 .oab-button.unity-text-element:disabled {
     border-color: rgb(150, 150, 150);
 }
