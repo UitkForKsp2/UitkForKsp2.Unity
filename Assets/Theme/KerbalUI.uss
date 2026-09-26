@@ -202,21 +202,28 @@
 
 .unity-base-slider > .unity-base-field__input,
 .unity-min-max-slider > .unity-base-field__input {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-color: #444b57;
-    border-width: 1px;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0.2);
+    -unity-slice-scale: 0.5;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
 }
-
+.unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container {
+    margin: 1;
+    -unity-background-image-tint-color: #444b57;
+    -unity-slice-scale: 0.5;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
+}
 .unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container > .unity-base-slider__dragger,
 .unity-min-max-slider > .unity-base-field__input > .unity-min-max-slider__dragger > .unity-min-max-slider__min-thumb,
 .unity-min-max-slider > .unity-base-field__input > .unity-min-max-slider__dragger > .unity-min-max-slider__max-thumb {
-    background-color: #c5e5f5;
-    border-color: #9eb8c6;
-    border-radius: 4px;
-    transition-property: background-color, border-color;
+    border-color: transparent;
+    background-color: transparent;
+    height: 23px;
+    margin-top: -12;
+    -unity-background-image-tint-color: #C5E5F5;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/slider-frame?fileID=21300000&guid=6b1e9d0b6b0ee504892dc19a4085e95a&type=3#slider-frame');
+    transition-property: -unity-background-image-tint-color;
     transition-duration: 0.2s;
-    border-width: 1px;
 }
 
 .unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container:active > .unity-base-slider__dragger,
@@ -225,10 +232,8 @@
 .unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container:focus > .unity-base-slider__dragger,
 .unity-min-max-slider > .unity-base-field__input:focus > .unity-min-max-slider__dragger > .unity-min-max-slider__min-thumb,
 .unity-min-max-slider > .unity-base-field__input:focus > .unity-min-max-slider__dragger > .unity-min-max-slider__max-thumb {
-    background-color: #51698e;
-    border-color: #455775;
+    -unity-background-image-tint-color: #51688d;
     cursor: initial;
-    border-width: 1px;
 }
 
 .unity-base-slider--horizontal > .unity-base-field__input > .unity-base-slider__drag-container > .unity-base-slider__dragger {
@@ -369,7 +374,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     border-color: rgba(86, 90, 100, 1);
     border-width: 1px;
-    padding: 5px;
+    padding: 1px;
     margin: 2px 0 0 0;
     border-radius: 8px;
 }
@@ -391,6 +396,10 @@
 
 .unity-base-text-field > .unity-base-field__input.unity-base-field__label {
     -unity-text-align: middle-left;
+}
+
+.unity-base-text-field > unity-base-text-field__input > unity-text-element--inner-input-field-component {
+    padding: 4 6 4 6px;
 }
 
 .unity-base-text-field:focus > .unity-base-field__label.unity-text-element {
@@ -494,75 +503,75 @@
 
 .unity-toggle.switch {
     justify-content: space-between;
-    margin: 0;
+    margin: 0 0 0 4;
 }
 
-.unity-toggle.switch > .unity-base-field__label.unity-text-element,
-.unity-toggle.switch:focus > .unity-base-field__label.unity-text-element{
-    color: #c0c7d5;
-    white-space: normal;
-    margin-left: 4px;
-    padding-bottom: 0;
-    padding-top: 3px;
-}
-
-/* Unchecked */
-.unity-toggle.switch > .unity-base-field__input {
-    flex-grow: 0;
-    flex-basis: 54px;
+.unity-toggle.switch > .toggle-switch-background-outer {
+    -unity-slice-scale: 0.5;
     height: 24px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/control-frame.png?fileID=21300000&guid=a5c196a2bc627c1469f6f790adb266a8&type=3#control-frame');
-    -unity-slice-scale: 0.5px;
+    flex-basis: 54;
+    padding: 1;
+    justify-content: center;
+    -unity-background-image-tint-color: black;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
+}
+
+.unity-toggle.switch > .toggle-switch-background-outer > .toggle-switch-border-outer {
+    -unity-slice-scale: 0.5;
+    padding: 1;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
     -unity-background-image-tint-color: rgb(73, 77, 91);
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
 }
 
-.unity-toggle.switch > .unity-base-field__input > .unity-toggle__checkmark {
-    height: 20px;
-    width: 26px;
-    border-radius: 7px;
+.unity-toggle.switch > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-inner {
+    -unity-slice-scale: 0.5;
+    margin: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    -unity-background-image-tint-color: black;
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.05s;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
+}
+
+.unity-toggle.switch > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-puck {
     position: absolute;
-    left: 2px;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(189, 196, 209);
-    transition-property: left, background-color;
-    transition-duration: 0.2s;
+    height: 20;
+    width: 28;
+    left: 1;
+    -unity-slice-scale: 0.5;
+    flex-grow: 1;
+    flex-shrink: 0;
+    -unity-background-image-tint-color: rgb(189, 196, 209);
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
+    transition-property: left, -unity-background-image-tint-color;
+    transition-duration: 0.1s;
 }
 
-.unity-toggle.switch:active > .unity-base-field__input > .unity-toggle__checkmark,
-.unity-toggle.switch:focus > .unity-base-field__input > .unity-toggle__checkmark {
-    border-color: rgb(0, 0, 0);
+.unity-toggle.switch:hover > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-puck {
+    -unity-background-image-tint-color: rgb(160, 174, 201);
 }
 
-/* Unchecked hover */
-
-.unity-toggle.switch:hover > .unity-base-field__input > .unity-toggle__checkmark {
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(160, 174, 201);
+.unity-toggle.switch:active > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-puck {
+    -unity-background-image-tint-color: rgb(99, 109, 125);
 }
 
-/* Checked */
-.unity-toggle.switch:checked > .unity-base-field__input {
-    background-color: rgb(13, 113, 64);
-    border-color: rgb(0, 0, 0);
+.unity-toggle.switch > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-puck > .toggle-switch-border-puck {
+    -unity-slice-scale: 0.5;
+    flex-grow: 1;
+    flex-shrink: 0;
+    -unity-background-image-tint-color: black;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
 }
 
-.unity-toggle.switch:checked > .unity-base-field__input > .unity-toggle__checkmark {
-    background-image: none;
-    left: 26px;
+.unity-toggle.switch:checked > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-inner {
+    -unity-background-image-tint-color: rgb(13, 113, 64);
 }
-
-.unity-toggle.switch:checked:focus > .unity-base-field__input > .unity-toggle__checkmark {
-    border-color: rgb(0, 0, 0);
-    background-image: none;
-}
-
-/* Checked hover */
-.unity-toggle.switch:checked:hover > .unity-base-field__input > .unity-toggle__checkmark {
-    background-color: rgb(160, 174, 201);
-    background-image: none;
+.unity-toggle.switch:checked > .toggle-switch-background-outer > .toggle-switch-border-outer > .toggle-switch-background-puck {
+    left: 23px;
 }
 
 /* endregion */
@@ -578,7 +587,7 @@
 
 .unity-radio-button > .unity-radio-button__label {
     color: #c0c7d5;
-    padding: 1px 2px 2px 4px;
+    padding: 1px 2px 2px 1px;
 }
 
 .unity-radio-button:checked > .unity-radio-button__label.unity-text-element,
@@ -587,42 +596,66 @@
 }
 
 .unity-radio-button > .unity-radio-button__input {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    border-radius: 7px;
-    border-width: 1px;
-    border-color: #b5bcc9;
-    padding: 0;
-    background-color: #0e1014;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    align-self: center;
+    -unity-background-image-tint-color: #b5bcc9;
+    -unity-slice-scale: 0.5px;
+    background-color: transparent;
     overflow: visible;
-    transition-property: border-color;
-    transition-duration: 0.2s;
 }
 
-.unity-radio-button:hover > .unity-radio-button__input {
-    border-color: #7a7f88;
+.unity-radio-button > .unity-radio-button__input > .unity-radio-button__checkmark-background {
+    -unity-background-image-tint-color: rgba(255,255,255,0.6);
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.05s;
 }
 
-.unity-radio-button:checked > .unity-radio-button__input,
-.unity-radio-button:focus > .unity-radio-button__input {
-    border-color: #00cc53;
+.unity-radio-button:checked > .unity-radio-button__input > .unity-radio-button__checkmark-background,
+.unity-radio-button:hover > .unity-radio-button__input > .unity-radio-button__checkmark-background,
+.unity-radio-button:checked > .unity-radio-button__input .unity-radio-button__checkmark,
+.unity-radio-button:hover > .unity-radio-button__input .unity-radio-button__checkmark {
+    -unity-background-image-tint-color: rgba(0, 244, 82, 1);
+}
+
+.unity-radio-button:focus > .unity-radio-button__input > .unity-radio-button__checkmark-background,
+.unity-radio-button:checked:focus > .unity-radio-button__input > .unity-radio-button__checkmark-background,
+.unity-radio-button:focus > .unity-radio-button__input .unity-radio-button__checkmark,
+.unity-radio-button:checked:focus > .unity-radio-button__input .unity-radio-button__checkmark {
+    -unity-background-image-tint-color: rgba(0, 168, 70, 1);
+}
+
+.unity-radio-button:checked:hover > .unity-radio-button__input > .unity-radio-button__checkmark-background,
+.unity-radio-button:checked:hover > .unity-radio-button__input .unity-radio-button__checkmark {
+    -unity-background-image-tint-color: rgba(0, 255, 102, 1);
 }
 
 .unity-radio-button > .unity-radio-button__input > .unity-radio-button__checkmark-background {
     /*background-color: #0e1014;*/
     background-color: transparent;
     border-width: 0;
-    padding-top: 7px;
-    margin-left: -3px;
+    padding-top: 0px;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    -unity-slice-scale: 0.5px;
+    justify-content: center;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-radio-button-fill.png?fileID=21300000&guid=a99cff026fff362c4cbc90e79197bd2ff&type=3#frame-radio-button-fill');
 }
 
 .unity-radio-button > .unity-radio-button__input .unity-radio-button__checkmark {
-    border-radius: 3px;
+    border-radius: 0;
     width: 10px;
     height: 10px;
-    background-color: #00cc53;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-radio-button-active.png?fileID=21300000&guid=cd4d405f4f629034b83d66d6ffd4ed77&type=3#frame-radio-button-active');
+    -unity-slice-scale: 0.5px;
+    background-color: transparent;
+    -unity-background-image-tint-color: #00cc53;
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.05s;
 }
 
 .unity-radio-button > .unity-radio-button__input .unity-radio-button__text {
@@ -793,6 +826,8 @@
 .unity-enum-field {
     -unity-background-image-tint-color: rgb(0, 0, 0);
     color: rgb(4, 16, 41);
+    margin-left: 0;
+    margin-right: 0;
     flex-grow: 1;
     align-self: auto;
     height: 32px;
@@ -813,7 +848,32 @@
     height: 14px;
 }
 
-.unity-popup-field > .unity-popup-field__input,
+.unity-popup-field > .ksp2-dropdown-background {
+    flex-grow: 1;
+    padding: 1px;
+    border-width: 0;
+    background-color: transparent;
+    margin: 0;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
+    -unity-slice-scale: 0.5;
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0.2);
+    transition-property: -unity-background-image-tint-color;
+    transition-duration: 0.2s;
+}
+
+.unity-popup-field > .ksp2-dropdown-background > .ksp2-dropdown-border {
+    flex-grow: 1;
+    flex-shrink: 0;
+    -unity-slice-scale: 0.5;
+    -unity-background-image-tint-color: rgba(86, 90, 100, 1);
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
+}
+
+.ksp2-dropdown-border {
+    flex-direction: row;
+    padding: 10px 12px;
+}
+
 .unity-enum-field > .unity-enum-field__input {
     flex-grow: 1;
     padding: 5px 12px;
@@ -836,20 +896,27 @@
     color: rgb(192, 199, 213);
 }
 
-.unity-popup-field:focus .unity-base-field__label.unity-text-element,
 .unity-enum-field:focus .unity-base-field__label.unity-text-element {
     color: rgb(192, 199, 213);
 }
 
-.unity-popup-field:hover .unity-base-field__input.unity-popup-field__input,
+.unity-popup-field:hover > .unity-base-field__input.unity-popup-field__input.ksp2-dropdown-background {
+    background-color: transparent;
+    -unity-background-image-tint-color: rgba(0, 0, 10, 0.3);
+}
+
 .unity-enum-field:hover .unity-base-field__input.unity-enum-field__input {
     border-color: rgba(86, 90, 100, 1);
     background-color: rgba(0, 0, 10, 0.3);
 }
 
-.unity-popup-field:active .unity-base-field__input.unity-popup-field__input,
+.unity-popup-field:active > .unity-base-field__input.unity-popup-field__input.ksp2-dropdown-background,
+.unity-popup-field:focus > .unity-base-field__input.unity-popup-field__input.ksp2-dropdown-background {
+    background-color: transparent;
+    -unity-background-image-tint-color: rgba(28, 42, 64, 1);
+}
+
 .unity-enum-field:active .unity-base-field__input.unity-enum-field__input,
-.unity-popup-field:focus .unity-base-field__input.unity-popup-field__input,
 .unity-enum-field:focus .unity-base-field__input.unity-enum-field__input {
     border-color: rgba(86, 90, 100, 1);
     background-color: rgba(28, 42, 64, 1);
@@ -1043,34 +1110,35 @@
 
 .oab-button.unity-text-element {
     color: rgb(0, 0, 0);
-    border-width: 1px;
-    padding: 1px;
-    border-radius: 8px;
+    padding: 2px;
+    border-radius: 0;
+    border-width: 0;
+    -unity-slice-scale: 0.5;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
 }
 
 .oab-button.unity-text-element,
 .oab-button.unity-text-element:hover,
 .oab-button.unity-text-element:active,
 .oab-button.unity-text-element:focus {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgb(87, 95, 111);
+    background-color: transparent;
+    -unity-background-image-tint-color: rgb(87, 95, 111);
 }
 
 .oab-button.unity-text-element > .oab-button__inner {
     flex-grow: 1;
-    background-color: rgb(189, 196, 209);
-    border-radius: 7px;
+    -unity-background-image-tint-color: rgb(189, 196, 209);
+    -unity-slice-scale: 0.5;
     justify-content: center;
-    transition-property: background-color, border-color;
-    transition-duration: 0.3s;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
 }
 
 .oab-button.unity-text-element:hover > .oab-button__inner {
-    background-color: rgb(214, 224, 255);
+    -unity-background-image-tint-color: rgb(214, 224, 255);
 }
 
 .oab-button.unity-text-element:active > .oab-button__inner {
-    background-color: rgb(191, 202, 235);
+    -unity-background-image-tint-color: rgb(191, 202, 235);
 }
 
 .oab-button.unity-text-element > .oab-button__inner > .oab-button__label {
@@ -1091,7 +1159,7 @@
 }
 
 .oab-button.unity-text-element.destructive > .oab-button__inner {
-    background-color: rgb(209, 173, 173);
+    -unity-background-image-tint-color: rgb(209, 173, 173);
 }
 
 .oab-button.unity-text-element.destructive:hover {
@@ -1099,7 +1167,7 @@
 }
 
 .oab-button.unity-text-element.destructive:hover > .oab-button__inner {
-    background-color: rgb(209, 146, 146);
+    -unity-background-image-tint-color: rgb(209, 146, 146);
 }
 
 .oab-button.unity-text-element.destructive:active {
@@ -1107,7 +1175,7 @@
 }
 
 .oab-button.unity-text-element.destructive:active > .oab-button__inner {
-    background-color: rgb(209, 119, 119);
+    -unity-background-image-tint-color: rgb(209, 119, 119);
 }
 
 .oab-button.unity-text-element.active {
@@ -1115,7 +1183,7 @@
 }
 
 .oab-button.unity-text-element.active > .oab-button__inner {
-    background-color: rgb(188, 161, 255);
+    -unity-background-image-tint-color: rgb(188, 161, 255);
 }
 
 .oab-button.unity-text-element.active:hover {
@@ -1123,7 +1191,7 @@
 }
 
 .oab-button.unity-text-element.active:hover > .oab-button__inner {
-    background-color: rgb(206, 190, 255);
+    -unity-background-image-tint-color: rgb(206, 190, 255);
 }
 
 .oab-button.unity-text-element:disabled {
@@ -1131,7 +1199,7 @@
 }
 
 .oab-button.unity-text-element:disabled > .oab-button__inner {
-    background-color: rgb(152, 159, 166);
+    -unity-background-image-tint-color: rgb(152, 159, 166);
     color: rgb(60, 60, 60);
 }
 
@@ -1181,9 +1249,12 @@
 
 .oab-button-toggle {
     color: rgb(0, 0, 0);
-    border-width: 1px;
-    padding: 1px;
-    border-radius: 8px;
+    padding: 2px;
+    border-radius: 0;
+    border-width: 0;
+    -unity-slice-scale: 0.5;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
+    -unity-background-image-tint-color: #575F6F;
     margin: 0;
 }
 
@@ -1192,7 +1263,6 @@
 .oab-button-toggle:active,
 .oab-button-toggle:focus {
     background-color: rgba(0, 0, 0, 0);
-    border-color: rgb(87, 95, 111);
 }
 
 .oab-button-toggle > .oab-button-toggle__label {
@@ -1211,8 +1281,9 @@
 
 .oab-button-toggle > .unity-toggle__input {
     flex-grow: 1;
-    background-color: rgb(189, 196, 209);
-    border-radius: 7px;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
+    -unity-background-image-tint-color: rgb(189, 196, 209);
+    -unity-slice-scale: 0.5;
     justify-content: center;
     width: 100%;
 }
@@ -1222,19 +1293,19 @@
 }
 
 .oab-button-toggle:hover > .unity-toggle__input {
-    background-color: rgb(214, 224, 255);
+    -unity-background-image-tint-color: rgb(214, 224, 255);
 }
 
 .oab-button-toggle:active > .unity-toggle__input {
-    background-color: rgb(191, 202, 235);
+    -unity-background-image-tint-color: rgb(191, 202, 235);
 }
 
 .oab-button-toggle:checked > .unity-toggle__input {
-    background-color: rgb(188, 161, 255);
+    -unity-background-image-tint-color: rgb(188, 161, 255);
 }
 
 .oab-button-toggle:checked:hover > .unity-toggle__input {
-    background-color: rgb(206, 190, 255);
+    -unity-background-image-tint-color: rgb(206, 190, 255);
 }
 
 .oab-button-toggle > .oab-button-toggle-label {
