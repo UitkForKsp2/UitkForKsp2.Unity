@@ -643,14 +643,15 @@
     max-height: 24px;
     -unity-slice-scale: 0.5px;
     justify-content: center;
-    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-radio-button-fill.png?fileID=21300000&guid=a99cff026fff362c4cbc90e79197bd2ff&type=3#frame-radio-button-fill');
+    border-radius: 0;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-radio-button-fill.png?fileID=21300000&guid=3d0ae9bf5f90f0447bab7512b1e6aac5&type=3#frame-radio-button-fill');
 }
 
 .unity-radio-button > .unity-radio-button__input .unity-radio-button__checkmark {
     border-radius: 0;
-    width: 10px;
-    height: 10px;
-    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-radio-button-active.png?fileID=21300000&guid=cd4d405f4f629034b83d66d6ffd4ed77&type=3#frame-radio-button-active');
+    width: 12px;
+    height: 12px;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/bar-toggle-bg.png?fileID=21300000&guid=cd4d405f4f629034b83d66d6ffd4ed77&type=3#bar-toggle-bg');
     -unity-slice-scale: 0.5px;
     background-color: transparent;
     -unity-background-image-tint-color: #00cc53;
