@@ -10,7 +10,6 @@
 
 #ColorPicker .unity-slider__input {
     background-color: transparent;
-    border-radius: 6px;
     border-width: 0;
 }
 
@@ -41,6 +40,10 @@
     margin: 0;
 }
 
+#HueSlider {
+    background-image: none;
+}
+
 #HueSlider > .unity-slider__input > .unity-base-slider__drag-container > .unity-base-slider__dragger {
     margin-top: -10px;
 }
@@ -48,10 +51,6 @@
 #HueSlider {
     width: 100%;
     margin-bottom: 4px;
-}
-
-#HueSlider > .unity-slider__input {
-    border-radius: 8px;
 }
 
 #HueSlider > .unity-slider__input > .unity-base-slider__drag-container {

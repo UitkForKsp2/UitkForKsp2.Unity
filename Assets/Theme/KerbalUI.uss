@@ -92,6 +92,7 @@
 
 .unity-scroller > .unity-base-slider > .unity-base-slider__input {
     border-width: 0;
+    border-radius: 0;
     background-color: transparent;
 }
 
@@ -202,15 +203,14 @@
 
 .unity-base-slider > .unity-base-field__input,
 .unity-min-max-slider > .unity-base-field__input {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     -unity-background-image-tint-color: rgba(0, 0, 0, 0.2);
-    -unity-slice-scale: 0.5;
+    border-radius: 0;
     background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-fill?fileID=21300000&guid=1f99bb986215ce04cb9c71b7636fe6fc&type=3#frame-fill');
 }
 .unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container {
     margin: 1;
     -unity-background-image-tint-color: #444b57;
-    -unity-slice-scale: 0.5;
     background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/frame-border?fileID=21300000&guid=ba6e22273ed2e7c42867e7a84c655617&type=3#frame-border');
 }
 .unity-base-slider > .unity-base-field__input > .unity-base-slider__drag-container > .unity-base-slider__dragger,
@@ -1361,12 +1361,7 @@
     right: 2px;
     bottom: 2px;
     left: 2px;
-    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/bracket.png?fileID=2800000&guid=57aeb0876b8ec694e81f46be8cf94188&type=3#bracket');
-    -unity-slice-top: 14;
-    -unity-slice-bottom: 14;
-    -unity-slice-left: 14;
-    -unity-slice-right: 14;
-    -unity-background-scale-mode: stretch-to-fill;
+    background-image: url('project://database/Packages/uitkforksp2.controls/Assets/Theme/Sprites/bracket.png?fileID=2800000&guid=57aeb0876b8ec694e81f46be8cf94188&type=2#bracket');
     -unity-background-image-tint-color: rgb(170, 178, 204);
 }
 
